@@ -1,0 +1,15 @@
+extends ../layout/base
+
+block content
+  h1.index-title Login
+
+  .Link-form
+    form(action="" method="POST")
+      div
+        label(for="username") Username :
+        input(type="text" name="username" id="username")
+      div
+        label(for="password") Password :
+        input#password(type="password", name="password")
+      div
+        input(type="submit", value="Log me")

@@ -11,6 +11,6 @@ export default {
     return query('SELECT url FROM links WHERE alias = ?', alias);
   },
   delete(id) {
-    return query('DELETE * FROM links WHERE id = ?', id);
+    return query('DELETE FROM links WHERE id = ?', id);
   }
 }

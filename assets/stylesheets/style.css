@@ -1,4 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background: #29AECC;
+  font-family: "Roboto";
 }
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-transform: uppercase;
+  margin-right: 10px;
+  position: relative;
+  text-decoration: none;
+  top: 20px;
+  padding: 10px;
+}
+
+nav a:focus, nav a:active, nav a:hover, nav a.active {
+  background: rgba(255,255,255, 0.3);
+  text-shadow: 1px 1px 1px rgba(24,24,24, 0.2);
+  border-radius: 5px;
+}
+
+.index-title {
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  font-size: 7em;
+  text-shadow: 1px 1px 1px rgba(24,24,24, 0.2);
+}
+
+.Links {
+  width: 980px;
+  margin: auto;
+}
+
+  .Links-Item {
+    width: 25%;
+    background: rgba(255,255,255, 0.3);
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+    .Links-Item a {
+      color: white;
+      text-shadow: 1px 1px 1px rgba(24,24,24, 0.2);
+      font-weight: 300;
+    }
+
+
+.Link-form {
+  text-align: center;
+}
+  .Link-form div {
+    margin-bottom: 10px;
+  }
+    .Link-form label {
+      margin-right: 20px;
+      color: white;
+      text-shadow: 1px 1px 1px rgba(24,24,24, 0.2);
+    }
+
+    .Link-form input[type="text"],
+    .Link-form input[type="url"],
+    .Link-form input[type="password"] { 
+      height: 30px;
+      padding: 5px 10px;
+      width: 200px;
+    }
+    .Link-form input[type="submit"] {
+      display: block;
+      width: 300px;
+      margin: 35px auto;
+      background: white;
+      border: none;
+      padding: 10px;
+      font-size: 1.5em;
+      color: #333;
+      cursor: pointer;
+    }

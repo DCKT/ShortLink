@@ -1,17 +1,18 @@
 extends ../layout/base
 
 block content
-  h1 New link
+  h1.index-title New link
 
-  form(action="" method="POST")
-    div
-      label(for="url") URL :
-      input(type="url" name="url" id="url")
-    div
-      label(for="alias") Alias :
-      input(type="text" name="alias" id="alias" placeholder="Alias of your url")
-    div
-      label(for="title") Title :
-      input(type="text" name="title" id="title" placeholder="Title for your url")
-    div
-      input(type="submit", value="Add")
+  .Link-form
+    form(action="" method="POST")
+      div
+        label(for="url") URL :
+        input(type="url" name="url" id="url" placeholder="http://..")
+      div
+        label(for="alias") Alias :
+        input(type="text" name="alias" id="alias" placeholder="Alias of your url")
+      div
+        label(for="title") Title :
+        input(type="text" name="title" id="title" placeholder="Title for your url")
+      div
+        input(type="submit", value="Add")

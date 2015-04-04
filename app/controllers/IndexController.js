@@ -8,6 +8,7 @@ export default {
         .then(links => {
           res.locals.links = links;
           res.locals.title = "Home";
+
           res.render('index');
         })
         .catch(err => {

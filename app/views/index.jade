@@ -1,14 +1,17 @@
 extends ./layout/base
 
 block content
-  h1 ShortLink
+  h1.index-title ShortLink
 
-  for link in links
-    div
-      a(href="#{link.url}" target="_blank")
-        strong= link.title
-      p= link.alias
+  .Links
+    for link in links
+      .Links-item
+        a(href="#{link.url}" target="_blank")
+          = link.title
+        p 
+          |Alias : 
+          = link.alias
 
-      form(action="/links/delete" method="POST")
-        input(type="hidden" value="#{link.id}" name="id")
-        input(type="submit" value="Remove")
+        form(action="/links/delete" method="POST")
+          input(type="hidden" value="#{link.id}" name="id")
+          input(type="submit" value="Remove")

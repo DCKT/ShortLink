@@ -1,4 +1,5 @@
 import Link from '../models/Link';
+import path from 'path';
 
 export default {
   new: {
@@ -38,18 +39,20 @@ export default {
           res.locals.flash = {
             type: "info",
             message: "The link has been deleted correctly !"
-          }
+          };
+          res.redirect('/');
         })
         .catch(err => {
           console.error(err);
         });
     }
-  }
+  },
   alias: {
-    get(req, res) {
+    get(req, res, next) {
       var alias = req.params.alias;
 
-      Link.findByAlias(alias)
+      if (!path.extname(req.path).length && req.path != "/" ) {
+        Link.findByAlias(alias)
         .then(link => {
           if (link) {
             res.redirect(link[0].url);
@@ -62,6 +65,10 @@ export default {
         .catch(err => {
           console.error(err);
         });
+      }
+      else {
+        next();
+      }
     }
   }
 }

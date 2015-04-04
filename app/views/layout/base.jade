@@ -5,11 +5,12 @@ html
         = title
       
       |  - ShortLink
+    //- link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css')
     link(rel="stylesheet", href="/stylesheets/style.css")
   body
     nav
-      a(href="/") Home
-      a(href="/links/new") Add link
+      a(href="/" class="#{ path == '/' ? 'active' : '' }") Home
+      a(href="/links/new" class="#{ path == '/links/new' ? 'active' : '' }") Add link
     if flash
       .flash(class="#{flash.type}")
         p= flash.message
