@@ -4,12 +4,12 @@ html
       if title
         = title
       
-      |  - Awesome site
+      |  - ShortLink
     link(rel="stylesheet", href="/stylesheets/style.css")
   body
     nav
-      a(href="/") Accueil 
-
+      a(href="/") Home
+      a(href="/links/new") Add link
     if flash
       .flash(class="#{flash.type}")
         p= flash.message

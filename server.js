@@ -1,6 +1,6 @@
 import express from 'express';
 import http from 'http';
-import { Index } from './app/Router';
+import { Index, Links } from './app/Router';
 
 var app = express(),
 server  = http.createServer(app);
@@ -16,6 +16,7 @@ require('./config/middleware')(app, express);
 * ROUTES
 ********************* */
 app.use('/', Index);
+app.use('/links', Links);
 
 app.use(function(req, res, next){
   res.render('global/404', {

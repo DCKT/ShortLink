@@ -1,12 +1,12 @@
-import Book from '../models/Book';
+import Link from '../models/Link';
 
 export default {
   index: {
     get(req, res) {
       
-      Book.findAll()
-        .then(books => {
-          res.locals.books = books;
+      Link.findAll()
+        .then(links => {
+          res.locals.links = links;
           res.locals.title = "Home";
           res.render('index');
         })

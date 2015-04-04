@@ -1,7 +1,14 @@
 extends ./layout/base
 
 block content
-  h1 Hello World
+  h1 ShortLink
 
-  for book in books
-    h3= book.title
+  for link in links
+    div
+      a(href="#{link.url}" target="_blank")
+        strong= link.title
+      p= link.alias
+
+      form(action="/links/delete" method="POST")
+        input(type="hidden" value="#{link.id}" name="id")
+        input(type="submit" value="Remove")
