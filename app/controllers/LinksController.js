@@ -4,7 +4,7 @@ import path from 'path';
 export default {
   new: {
     get(req, res) {
-      res.locals.title = "New links";
+      res.locals.title = "New link";
       res.render('links/new');
     },
     post(req, res) {
